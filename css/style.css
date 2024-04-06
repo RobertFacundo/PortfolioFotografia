@@ -3,9 +3,77 @@
 * {
   margin: 0;
   padding: 0; }
+  * ::-webkit-scrollbar {
+    width: 3px;
+    /* Ancho de la barra de desplazamiento */ }
+  * ::-webkit-scrollbar-track {
+    background-color: #6a6868;
+    /* Color de fondo de la pista de desplazamiento */ }
+  * ::-webkit-scrollbar-thumb {
+    background-color: #101010;
+    /* Color del botón de desplazamiento */
+    border-radius: 5px;
+    /* Radio de borde del botón de desplazamiento */ }
 
 body {
-  background-color: rgba(0, 0, 0, 0.919); }
+  background-color: rgba(0, 0, 0, 0.984); }
+
+@font-face {
+  font-family: 'MiFuente';
+  /* Nombre que asignas a la fuente */
+  src: url("../../resource/LoveSeed-z8EVX.ttf") format("truetype"); }
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px; }
+  .nav .logo {
+    margin-left: 13px;
+    margin-top: 13px;
+    align-content: center; }
+  .nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 20px; }
+    .nav ul li {
+      list-style-type: none;
+      padding: 10px;
+      margin-top: 5px; }
+      .nav ul li a {
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-size: 23px;
+        padding: 27px 50px;
+        display: inline-block;
+        position: relative; }
+        .nav ul li a:before, .nav ul li a:after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          box-sizing: border-box;
+          transform: scale(0);
+          transition: 0.5s; }
+        .nav ul li a:before {
+          border-bottom: 2px solid #c6c0c0;
+          border-left: 2px solid #c6c0c0;
+          transform-origin: 0 100%; }
+        .nav ul li a:after {
+          border-top: 2px solid #c6c0c0;
+          border-right: 2px solid #c6c0c0;
+          transform-origin: 100% 0%; }
+        .nav ul li a:hover:after, .nav ul li a:hover:before {
+          transform: scale(1); }
+        .nav ul li a.active {
+          border-bottom: 2px solid #c6c0c0;
+          border-left: 2px solid #c6c0c0;
+          border-top: 2px solid #c6c0c0;
+          border-right: 2px solid #c6c0c0; }
 
 .main-index {
   position: relative;
@@ -53,3 +121,600 @@ body {
         transform-origin: 100% 0%; }
       .main-index .enter a:hover:after, .main-index .enter a:hover:before {
         transform: scale(1); }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 7px 9px;
+  padding: 13px 60px;
+  grid-auto-flow: row;
+  grid-template-areas: "img1 img2 img3" "img4 img6 img7" "img4 img5 img8"; }
+  .container .img1 {
+    grid-area: img1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container .img1 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la imagen dentro del contenedor */ }
+    .container .img1:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container .img1:hover .overlay {
+      opacity: 1; }
+    .container .img1 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container .img1 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container .img1 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+  .container .img2 {
+    grid-area: img2;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container .img2 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la imagen dentro del contenedor */ }
+    .container .img2:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container .img2:hover .overlay {
+      opacity: 1; }
+    .container .img2 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container .img2 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container .img2 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+  .container .img3 {
+    grid-area: img3;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container .img3 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la imagen dentro del contenedor */ }
+    .container .img3:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container .img3:hover .overlay {
+      opacity: 1; }
+    .container .img3 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container .img3 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container .img3 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+  .container .img4 {
+    grid-area: img4;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container .img4 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la imagen dentro del contenedor */ }
+    .container .img4:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container .img4:hover .overlay {
+      opacity: 1; }
+    .container .img4 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container .img4 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container .img4 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+  .container .img5 {
+    grid-area: img5;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container .img5 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la imagen dentro del contenedor */ }
+    .container .img5:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container .img5:hover .overlay {
+      opacity: 1; }
+    .container .img5 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container .img5 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container .img5 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+  .container .img6 {
+    grid-area: img6;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container .img6 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la imagen dentro del contenedor */ }
+    .container .img6:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container .img6:hover .overlay {
+      opacity: 1; }
+    .container .img6 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container .img6 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container .img6 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+  .container .img7 {
+    grid-area: img7;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container .img7 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la imagen dentro del contenedor */ }
+    .container .img7:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container .img7:hover .overlay {
+      opacity: 1; }
+    .container .img7 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container .img7 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container .img7 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+  .container .img8 {
+    grid-area: img8;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container .img8 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la i
+            magen dentro del contenedor */ }
+    .container .img8:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container .img8:hover .overlay {
+      opacity: 1; }
+    .container .img8 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container .img8 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container .img8 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+
+.container3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 7px 9px;
+  padding: 0px 60px;
+  grid-auto-flow: row;
+  grid-template-areas: "img1 img7 img4" "img6 img8 img4" "img5 img2 img3"; }
+  .container3 .img1 {
+    grid-area: img1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container3 .img1 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la imagen dentro del contenedor */ }
+    .container3 .img1:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container3 .img1:hover .overlay {
+      opacity: 1; }
+    .container3 .img1 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container3 .img1 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container3 .img1 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+  .container3 .img2 {
+    grid-area: img2;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container3 .img2 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la imagen dentro del contenedor */ }
+    .container3 .img2:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container3 .img2:hover .overlay {
+      opacity: 1; }
+    .container3 .img2 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container3 .img2 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container3 .img2 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+  .container3 .img3 {
+    grid-area: img3;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container3 .img3 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la imagen dentro del contenedor */ }
+    .container3 .img3:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container3 .img3:hover .overlay {
+      opacity: 1; }
+    .container3 .img3 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container3 .img3 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container3 .img3 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+  .container3 .img4 {
+    grid-area: img4;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container3 .img4 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la imagen dentro del contenedor */ }
+    .container3 .img4:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container3 .img4:hover .overlay {
+      opacity: 1; }
+    .container3 .img4 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container3 .img4 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container3 .img4 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+  .container3 .img5 {
+    grid-area: img5;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container3 .img5 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la imagen dentro del contenedor */ }
+    .container3 .img5:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container3 .img5:hover .overlay {
+      opacity: 1; }
+    .container3 .img5 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container3 .img5 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container3 .img5 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+  .container3 .img6 {
+    grid-area: img6;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container3 .img6 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la imagen dentro del contenedor */ }
+    .container3 .img6:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container3 .img6:hover .overlay {
+      opacity: 1; }
+    .container3 .img6 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container3 .img6 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container3 .img6 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+  .container3 .img7 {
+    grid-area: img7;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container3 .img7 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la imagen dentro del contenedor */ }
+    .container3 .img7:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container3 .img7:hover .overlay {
+      opacity: 1; }
+    .container3 .img7 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container3 .img7 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container3 .img7 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+  .container3 .img8 {
+    grid-area: img8;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container3 .img8 img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s, opacity 0.6s;
+      /* Ajustar la i
+            magen dentro del contenedor */ }
+    .container3 .img8:hover img {
+      transform: scale(1.1);
+      opacity: 0.6; }
+    .container3 .img8:hover .overlay {
+      opacity: 1; }
+    .container3 .img8 .overlay {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.03s; }
+      .container3 .img8 .overlay h3 {
+        margin: 0px 130px;
+        float: center;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.558); }
+      .container3 .img8 .overlay p {
+        width: 100%;
+        padding-top: 13px; }
+
+.main-contacto {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 13px 60px; }
+  .main-contacto .img-c {
+    width: 50%; }
+    .main-contacto .img-c img {
+      width: 100%; }
+  .main-contacto .t-c {
+    width: 50%; }
+
+.footer {
+  margin-top: 0px;
+  opacity: 0.6;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: transparent; }
+  .footer .p-footer {
+    text-align: center;
+    font-size: 13px;
+    line-height: 30px;
+    color: white; }
+    .footer .p-footer a {
+      color: white;
+      padding-top: 13px;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out; }
+      .footer .p-footer a:hover {
+        text-decoration: underline; }

@@ -1,0 +1,15 @@
+.main-contacto{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 13px 60px;
+    .img-c{
+        width: 50%;
+        img{
+            width: 100%;
+        }
+    }
+    .t-c{
+        width: 50%;
+    }
+}
