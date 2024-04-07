@@ -16,7 +16,8 @@
     /* Radio de borde del botón de desplazamiento */ }
 
 body {
-  background-color: rgba(0, 0, 0, 0.984); }
+  background-color: rgba(0, 0, 0, 0.984);
+  overflow-x: hidden; }
 
 @font-face {
   font-family: 'MiFuente';
@@ -76,14 +77,20 @@ body {
           border-right: 2px solid #c6c0c0; }
 
 .main-index {
-  position: relative;
-  /* Añade posición relativa para que el posicionamiento absoluto funcione correctamente */
-  background-image: url(../../multimedia/index3.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh; }
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente la imagen */
+  align-items: center;
+  /* Centra verticalmente la imagen */
+  height: 100vh;
+  padding: 0 10%;
+  /* Márgenes a los lados */ }
+  .main-index img {
+    max-width: 100%;
+    /* Asegura que la imagen no exceda el ancho del contenedor */
+    max-height: 100%; }
   .main-index .enter {
+    z-index: 2;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -138,7 +145,7 @@ body {
     .container .img1 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la imagen dentro del contenedor */ }
     .container .img1:hover img {
       transform: scale(1.1);
@@ -155,7 +162,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container .img1 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -172,7 +179,7 @@ body {
     .container .img2 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la imagen dentro del contenedor */ }
     .container .img2:hover img {
       transform: scale(1.1);
@@ -189,7 +196,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container .img2 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -206,7 +213,7 @@ body {
     .container .img3 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la imagen dentro del contenedor */ }
     .container .img3:hover img {
       transform: scale(1.1);
@@ -223,7 +230,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container .img3 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -240,7 +247,7 @@ body {
     .container .img4 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la imagen dentro del contenedor */ }
     .container .img4:hover img {
       transform: scale(1.1);
@@ -257,7 +264,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container .img4 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -274,7 +281,7 @@ body {
     .container .img5 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la imagen dentro del contenedor */ }
     .container .img5:hover img {
       transform: scale(1.1);
@@ -291,7 +298,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container .img5 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -308,7 +315,7 @@ body {
     .container .img6 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la imagen dentro del contenedor */ }
     .container .img6:hover img {
       transform: scale(1.1);
@@ -325,7 +332,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container .img6 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -342,7 +349,7 @@ body {
     .container .img7 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la imagen dentro del contenedor */ }
     .container .img7:hover img {
       transform: scale(1.1);
@@ -359,7 +366,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container .img7 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -376,7 +383,7 @@ body {
     .container .img8 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la i
             magen dentro del contenedor */ }
     .container .img8:hover img {
@@ -394,7 +401,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container .img8 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -420,7 +427,7 @@ body {
     .container3 .img1 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la imagen dentro del contenedor */ }
     .container3 .img1:hover img {
       transform: scale(1.1);
@@ -437,7 +444,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container3 .img1 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -454,7 +461,7 @@ body {
     .container3 .img2 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la imagen dentro del contenedor */ }
     .container3 .img2:hover img {
       transform: scale(1.1);
@@ -471,7 +478,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container3 .img2 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -488,7 +495,7 @@ body {
     .container3 .img3 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la imagen dentro del contenedor */ }
     .container3 .img3:hover img {
       transform: scale(1.1);
@@ -505,7 +512,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container3 .img3 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -522,7 +529,7 @@ body {
     .container3 .img4 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la imagen dentro del contenedor */ }
     .container3 .img4:hover img {
       transform: scale(1.1);
@@ -539,7 +546,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container3 .img4 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -556,7 +563,7 @@ body {
     .container3 .img5 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la imagen dentro del contenedor */ }
     .container3 .img5:hover img {
       transform: scale(1.1);
@@ -573,7 +580,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container3 .img5 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -590,7 +597,7 @@ body {
     .container3 .img6 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la imagen dentro del contenedor */ }
     .container3 .img6:hover img {
       transform: scale(1.1);
@@ -607,7 +614,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container3 .img6 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -624,7 +631,7 @@ body {
     .container3 .img7 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la imagen dentro del contenedor */ }
     .container3 .img7:hover img {
       transform: scale(1.1);
@@ -641,7 +648,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container3 .img7 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -658,7 +665,7 @@ body {
     .container3 .img8 img {
       width: 100%;
       height: 100%;
-      transition: transform 0.6s, opacity 0.6s;
+      transition: transform 0.2s, opacity 0.2s;
       /* Ajustar la i
             magen dentro del contenedor */ }
     .container3 .img8:hover img {
@@ -676,7 +683,7 @@ body {
       padding: 10px;
       text-align: center;
       opacity: 0;
-      transition: opacity 1.03s; }
+      transition: opacity 0.3s; }
       .container3 .img8 .overlay h3 {
         margin: 0px 130px;
         float: center;
@@ -690,7 +697,8 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin: 13px 60px; }
+  margin: 13px 60px;
+  color: white; }
   .main-contacto .img-c {
     width: 50%; }
     .main-contacto .img-c img {
