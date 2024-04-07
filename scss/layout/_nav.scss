@@ -23,6 +23,7 @@
             padding: 10px;
             margin-top: 5px;
 
+
             a {
                 text-align: center;
                 text-decoration: none;
@@ -31,8 +32,6 @@
                 padding: 27px 50px;
                 display: inline-block;
                 position: relative;
-
-               
 
                 &:before,
                 &:after {
@@ -63,13 +62,9 @@
                 &:hover:before {
                     transform: scale(1);
                 }
-                &.active {
-                    border-bottom: 2px solid #c6c0c0;
-                    border-left: 2px solid #c6c0c0;
-                    border-top: 2px solid #c6c0c0;
-                    border-right: 2px solid #c6c0c0;
-                }
             }
+
+
 
         }
     }

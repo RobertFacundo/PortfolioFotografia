@@ -1,17 +1,88 @@
-.main-contacto{
+.main-contacto {
     display: flex;
     flex-direction: row;
     width: 100%;
     margin: 13px 60px;
     color: white;
-    
-    .img-c{
+    font-family: "Crimson Text", serif;
+
+    .img-c {
         width: 50%;
-        img{
+
+        img {
             width: 100%;
         }
     }
-    .t-c{
-        width: 50%;
+
+    .t-c {
+        width: 45%;
+        margin: 5px 13px;
+
+        .titulo-c {
+            font-weight: 400;
+            font-size: 39px;
+            margin-top: 30px;
+        }
+
+        .hr {
+            width: 2px;
+            width: 70%;
+            margin: 13px 0px;
+        }
+
+        .parrafo {
+            font-weight: 200;
+            margin-right: 20px;
+            font-size: 16px;
+
+            .p-c {
+                margin: 30px 0px
+            }
+        }
+
+        .iconos {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            a {
+                text-align: center;
+                text-decoration: none;
+                color: white;
+                font-size: 23px;
+                padding: 10px 15px;
+                display: inline-block;
+                position: relative;
+            
+                &:before,
+                &:after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    box-sizing: border-box;
+                    transform: scale(0);
+                    transition: 0.5s;
+                }
+            
+                &:before {
+                    border-bottom: 2px solid #c6c0c0;
+                    border-left: 2px solid #c6c0c0;
+                    transform-origin: 0 100%;
+                }
+            
+                &:after {
+                    border-top: 2px solid #c6c0c0;
+                    border-right: 2px solid #c6c0c0;
+                    transform-origin: 100% 0%;
+                }
+            
+                &:hover:after,
+                &:hover:before {
+                    transform: scale(1);
+                }
+            }
+        }
     }
 }

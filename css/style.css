@@ -70,11 +70,6 @@ body {
           transform-origin: 100% 0%; }
         .nav ul li a:hover:after, .nav ul li a:hover:before {
           transform: scale(1); }
-        .nav ul li a.active {
-          border-bottom: 2px solid #c6c0c0;
-          border-left: 2px solid #c6c0c0;
-          border-top: 2px solid #c6c0c0;
-          border-right: 2px solid #c6c0c0; }
 
 .main-index {
   display: flex;
@@ -698,13 +693,61 @@ body {
   flex-direction: row;
   width: 100%;
   margin: 13px 60px;
-  color: white; }
+  color: white;
+  font-family: "Crimson Text", serif; }
   .main-contacto .img-c {
     width: 50%; }
     .main-contacto .img-c img {
       width: 100%; }
   .main-contacto .t-c {
-    width: 50%; }
+    width: 45%;
+    margin: 5px 13px; }
+    .main-contacto .t-c .titulo-c {
+      font-weight: 400;
+      font-size: 39px;
+      margin-top: 30px; }
+    .main-contacto .t-c .hr {
+      width: 2px;
+      width: 70%;
+      margin: 13px 0px; }
+    .main-contacto .t-c .parrafo {
+      font-weight: 200;
+      margin-right: 20px;
+      font-size: 16px; }
+      .main-contacto .t-c .parrafo .p-c {
+        margin: 30px 0px; }
+    .main-contacto .t-c .iconos {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+      .main-contacto .t-c .iconos a {
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-size: 23px;
+        padding: 10px 15px;
+        display: inline-block;
+        position: relative; }
+        .main-contacto .t-c .iconos a:before, .main-contacto .t-c .iconos a:after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          box-sizing: border-box;
+          transform: scale(0);
+          transition: 0.5s; }
+        .main-contacto .t-c .iconos a:before {
+          border-bottom: 2px solid #c6c0c0;
+          border-left: 2px solid #c6c0c0;
+          transform-origin: 0 100%; }
+        .main-contacto .t-c .iconos a:after {
+          border-top: 2px solid #c6c0c0;
+          border-right: 2px solid #c6c0c0;
+          transform-origin: 100% 0%; }
+        .main-contacto .t-c .iconos a:hover:after, .main-contacto .t-c .iconos a:hover:before {
+          transform: scale(1); }
 
 .footer {
   margin-top: 0px;
